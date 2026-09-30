@@ -1,0 +1,59 @@
+:root{--bg:#0a0a0b;--tx:#fafafa;--mut:#8b8d98;--line:#1c1f26;--f-d:'Bebas Neue','Impact',sans-serif;--f-b:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--f-b);font-weight:300;line-height:1.6}
+section{padding:120px 8vw;position:relative}
+.label{color:var(--mut);letter-spacing:.14em;font-size:14px;text-transform:uppercase}
+.label.bar::after{content:"";display:block;width:36px;height:1px;background:var(--mut);margin-top:12px}
+h2{font-family:var(--f-d);font-weight:400;font-size:clamp(72px,11vw,170px);line-height:.92;margin:40px 0 70px;text-transform:uppercase}
+nav{position:fixed;right:32px;bottom:32px;z-index:10;display:flex;flex-direction:column;gap:14px;text-align:right;font-weight:400;font-size:15px}
+nav.top{top:28px;bottom:auto}
+nav a{color:var(--tx);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent}
+nav a.on{border-color:var(--tx)}
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:12vh;
+ background:linear-gradient(90deg,rgba(10,10,11,.85),rgba(10,10,11,.2)),url("../images/photo-portrait.jpg") center/cover,#111;filter:none}
+#hero h1{font-family:var(--f-d);font-weight:400;font-size:clamp(70px,14vw,230px);line-height:.9}
+#hero h3{font-weight:400;font-size:clamp(20px,2.6vw,38px);text-transform:uppercase;margin:8px 0 40px}
+#hero p{max-width:460px;color:#d5d6dc;font-size:19px}
+/* ABOUT */
+.about p{font-size:clamp(20px,2vw,28px);max-width:1000px;line-height:1.7;margin:40px 0 80px}
+.quote{font-family:var(--f-d);font-size:clamp(60px,9vw,150px);line-height:.95;color:#d2d4dc;max-width:1000px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:80px}
+.two p{margin:12px 0 0;font-size:19px}
+/* SKILLS */
+.skills{display:grid;grid-template-columns:1fr 1fr;column-gap:8vw}
+.skills div{font-size:clamp(20px,2.2vw,32px);padding:34px 0;border-bottom:1px solid var(--line);color:#dcdde3}
+/* WORK */
+.job{display:grid;grid-template-columns:1.2fr .6fr 1.4fr;gap:40px;padding:60px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.job h4{font-weight:400;font-size:clamp(28px,3.4vw,52px);line-height:1.1}
+.job .co{font-size:24px;color:#b7b9c4;margin-top:14px}
+.job .loc{color:#5d606c;margin-top:8px}
+.job .date{color:var(--mut);letter-spacing:.14em;font-size:15px}
+.job p{color:#b7b9c4;font-size:18px;line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.tags span{border:1px solid #262a33;border-radius:99px;padding:5px 18px;font-size:14px;color:var(--mut)}
+/* PROJETS */
+.intro{max-width:820px;color:#a6a8b3;font-size:20px;margin:-30px 0 70px}
+.serie{margin-bottom:80px}
+.serie h5{font-weight:400;font-size:15px;letter-spacing:.12em;color:var(--mut);text-transform:uppercase;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px}
+.card figure{aspect-ratio:9/16;background:#15171c;border:1px dashed #2c303a;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#4a4e5a;font-size:14px;text-align:center;padding:20px}
+.card.h figure{aspect-ratio:16/9}
+.card img,.card video,.card iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
+.card figcaption{color:var(--mut);font-size:14px;margin-top:12px;line-height:1.5}
+/* EDUCATION */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:50px 0}
+.edu .label{padding-top:12px}
+.edu h4{font-weight:400;font-size:clamp(26px,2.8vw,42px);line-height:1.2}
+.edu p{color:#a6a8b3;font-size:18px;margin:22px 0}
+.edu small{color:var(--mut);font-size:16px}
+footer{padding:80px 8vw;color:var(--mut);font-size:15px}
+footer a{color:var(--tx)}
+@media(max-width:800px){
+ section{padding:90px 6vw}
+ .job,.edu,.two,.skills{grid-template-columns:1fr;gap:20px}
+ nav{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
